@@ -1,10 +1,8 @@
-import {Component} from "react";
+import React from "react";
 
-export default class CartIcon extends Component {
-
-    render () {
+export default function CartIcon () {
       return (
-        <svg onClick={this.props.click} id="cart-icon" version="1.1"
+	  	<svg id="cart-icon" version="1.1"
             xmlns="http://www.w3.org/2000/svg"
             xmlnsXlink="http://www.w3.org/1999/xlink"
             x="0px" y="0px"
@@ -21,7 +19,6 @@ export default class CartIcon extends Component {
 			         c0.997,0,1.804,0.808,1.804,1.804C80.293,42.744,79.486,43.552,78.489,43.552z"/>
 		      <path d="M76.051,52.574H49.864c-0.996,0-1.804-0.808-1.804-1.804c0-0.997,0.808-1.804,1.804-1.804h26.188
 			         c0.997,0,1.804,0.808,1.804,1.804C77.855,51.766,77.048,52.574,76.051,52.574z"/>
-        </svg>
-      )
-    }
+    	</svg>
+	)
 }

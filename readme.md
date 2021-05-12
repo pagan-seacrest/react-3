@@ -1,2 +1,1 @@
-Для запуска бэкенда
-#### node server.js
+# node server.js
