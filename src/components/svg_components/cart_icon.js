@@ -1,8 +1,9 @@
 import React from "react";
 
-export default function CartIcon () {
-      return (
-	  	<svg id="cart-icon" version="1.1"
+export default function CartIcon ({addToCart}) {
+
+	return (
+	  	<svg id="cart-icon" version="1.1" onClick={addToCart}
             xmlns="http://www.w3.org/2000/svg"
             xmlnsXlink="http://www.w3.org/1999/xlink"
             x="0px" y="0px"

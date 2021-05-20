@@ -1,17 +1,16 @@
 import React, {useState, useEffect} from "react";
+import propTypes from "prop-types";
 import axios from "axios";
 import List from "../List";
 
-export default function Home () {
+List.propTypes = { list: propTypes.array.isRequired }
+
+export default function Home ({addToCart}) {
     const [list, setList] = useState([]);
 
     useEffect(() => {
         axios.get("/items").then(res => setList(res.data));
     }, []);
 
-    return (
-        <>
-        <List list={list} />
-        </>
-    )
+    return <List ajax={true} list={list} addToCart={addToCart} />
 }

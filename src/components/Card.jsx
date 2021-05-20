@@ -3,18 +3,9 @@ import "../public/styles/page.scss";
 import CartIcon from "./svg_components/cart_icon";
 import StarIcon from "./svg_components/star_icon";
 import IconsContainer from "./containers/Icons_Container";
+import {crossIcon} from "../config.js";
 
-export default function Card ({brand, price, color, path, idItem}) {
-
-
-      // sessionStorage.setItem("selected", JSON.stringify({
-      //     brand: brand,
-      //     price: price,
-      //     color: color,
-      //     path: path,
-      //     id: idItem ,
-      //   }));
-
+export default function Card ({brand, price, color, path, idItem, addToCart, card, removeItem}) {
 
   return (
     <li className="card-item" id={idItem}>
@@ -26,8 +17,8 @@ export default function Card ({brand, price, color, path, idItem}) {
           <li><span>ID </span><p>{idItem}</p></li>
       </ul>
       <IconsContainer>
-        <CartIcon />
-        <StarIcon />
+        { addToCart && <CartIcon addToCart={addToCart} />} 
+        { addToCart ? <StarIcon card={card} /> : <div className="cross" onClick={removeItem}>{crossIcon}</div>}
       </IconsContainer>
     </li>
   )

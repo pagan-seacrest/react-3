@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
 export default function IconsContainer ({children}) {
-    const [color, setColor] = useState("");
     
     return (
         <>
